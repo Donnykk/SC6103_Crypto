@@ -73,9 +73,9 @@ def pohlig_hellman(P, Q, p, a, order):
 a = 2
 b = 3
 p = 101
-order = 19  
+order = 19
 P = (2, 7)
-Q = scalar_mult(7, P, p, a)  
+Q = scalar_mult(7, P, p, a)
 
 private_key = pohlig_hellman(P, Q, p, a, order)
 print(f"Recovered private key: {private_key}")
