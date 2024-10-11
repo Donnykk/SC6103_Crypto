@@ -53,9 +53,11 @@ def decryption(cplantext, key, p):
 
 
 # Elliptic curve parameters
-a = 1
-b = 6
-p = 11
+a = 2
+b = 3
+p = 101
+
+# private key
 key = 7
 
 points = get_points(a, b, p)
@@ -63,11 +65,14 @@ print("Elements in the point set:")
 print(points, end="")
 print("\n-------------------------------------------------------------------")
 
+# generator points
 A = (2, 7)
 B = (2, 7)
+
+# public key
 Q = cal_NA(key, A, B, p)
-r = 3
-message = (10, 9)
+r = 15
+message = (50, 70)
 
 print(f"Original message: {message}")
 
